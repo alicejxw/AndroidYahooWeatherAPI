@@ -2,8 +2,7 @@ Android Yahoo Weather API
 ======================
 Yahoo WeatherAPIから天気を取得します。
 
-使い方(How to use?)
-
+## 使い方(How to use?) ##
 ### YahooWeatherAPIからのデータ取得 ###
     /*
      * My information about Yahoo Weather API
