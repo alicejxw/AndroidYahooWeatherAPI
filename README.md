@@ -1,18 +1,29 @@
 Android Yahoo Weather API
 ======================
-ここにプロジェクトの概要を書きます。
-行末にスペースを2つ入れると
+Yahoo WeatherAPIから天気を取得します。
 
 使い方(How to use?)
-------
-### インライン ###
-インラインのコードは、**バッククォート** (`` ` ``) で囲みます。
 
-### ブロックレベル ###
-    function f () {
-        alert(0);  /* 先頭に4文字のスペース、
-                      もしくはタブを挿入します */
+### YahooWeatherAPIからのデータ取得 ###
+    /*
+     * My information about Yahoo Weather API
+     */
+    String key      = "dj0zaiZpPW1lSUozbFZabTd1RSZkPVlXazlVVlpZTkVFeE5XRW1jR285TUEtLSZzPWNvbnN1bWVyc2VjcmV0Jng9OWY-";
+    String position = "140.22036,39.611813";
+
+    /*
+     * Get weather information from Yahoo API
+     */
+    YahooWeatherAPI yahooapi = new YahooWeatherAPI(key, position);
+    Weathers weathers = yahooapi.getWeathers();
+
+    /*
+     * Weather information
+     */
+    for (Weather weather:weathers) {
+        System.out.println(weather.toString());
     }
+
 
 関連情報
 --------
